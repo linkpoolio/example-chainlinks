@@ -21,7 +21,8 @@ module.exports = {
 
       // Chainlink Configuration: LinkPool Ropsten Node
       oracleAddress: "0xbe4cda56b65af5ab59276ca02e103584aba84603",
-      jobId: "2618ad23e2874c36881282e96e819ac4"
+      assetPriceJobId: "2618ad23e2874c36881282e96e819ac4",
+      alphaVantageJobId: "6f9185622f0c406fa2364b7f7fb5a796"
     },
     development: {
       host: "localhost",
@@ -31,7 +32,8 @@ module.exports = {
 
       // Chainlink Configuration: Enter your local job id and oracle address
       oracleAddress: "",
-      jobId: ""
+      assetPriceJobId: "",
+      alphaVantageJobId: ""
     }
   },
   solc: {
