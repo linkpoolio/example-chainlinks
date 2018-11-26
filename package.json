@@ -1,0 +1,21 @@
+{
+  "name": "example-chainlinks",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {},
+  "scripts": {
+    "migrate": "./node_modules/.bin/truffle migrate",
+    "debug": "./node_modules/.bin/truffle debug",
+    "compile": "./node_modules/.bin/truffle compile",
+    "exec": "./node_modules/.bin/truffle exec",
+    "test": "./node_modules/.bin/truffle test"
+  },
+  "author": "Jonny Huxtable",
+  "license": "ISC",
+  "dependencies": {
+    "chainlink": "github:smartcontractkit/chainlink",
+    "truffle-hdwallet-provider-privkey": "^0.3.0",
+    "web3-provider-engine": "^14.1.0"
+  }
+}
