@@ -1,5 +1,5 @@
 # Example Chainlinks
-Some example chainlinks that can be deployed for a variety of types of external data.
+Example Chainlinks that get data from various sources. Already deployed to Ropsten, you can run the included scripts to easily fetch data on-chain via Chainlink.
 
 ### Current examples:
 
