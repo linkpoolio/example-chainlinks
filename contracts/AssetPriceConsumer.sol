@@ -1,9 +1,11 @@
 pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
-import "chainlink/solidity/contracts/Chainlinked.sol";
+import "chainlink/contracts/Chainlinked.sol";
 
 contract AssetPriceConsumer is Chainlinked, Ownable {
+    // solium-disable-next-line zeppelin/no-arithmetic-operations
+    uint256 constant private ORACLE_PAYMENT = 1 * LINK;
 
     bytes32 public jobId;
 
@@ -38,22 +40,30 @@ contract AssetPriceConsumer is Chainlinked, Ownable {
     }
 
     function requestPrice(string _base, string _quote, int _times) internal {
-        ChainlinkLib.Run memory run = newRun(jobId, this, "fulfill(bytes32,uint256)");
-        run.add("base", _base);
-        run.add("quote", _quote);
-        run.add("copyPath", "price");
-        run.addInt("times", _times);
-        bytes32 requestId = chainlinkRequest(run, LINK(1));
+        Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
+        req.add("base", _base);
+        req.add("quote", _quote);
+        req.add("copyPath", "price");
+        req.addInt("times", _times);
+        bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
         requests[requestId] = keccak256(abi.encodePacked(_base, _quote));
     }
 
-    function cancelRequest(bytes32 _requestId) public onlyOwner {
-        cancelChainlinkRequest(_requestId);
+    function cancelRequest(
+        bytes32 _requestId,
+        uint256 _payment,
+        bytes4 _callbackFunctionId,
+        uint256 _expiration
+    )
+    public
+    onlyOwner
+    {
+        cancelChainlinkRequest(_requestId, _payment, _callbackFunctionId, _expiration);
     }
 
     function fulfill(bytes32 _requestId, uint256 _price)
     public
-    checkChainlinkFulfillment(_requestId)
+    recordChainlinkFulfillment(_requestId)
     {
         emit RequestFulfilled(_requestId, _price);
         prices[requests[_requestId]] = _price;

@@ -1,13 +1,11 @@
-var AlphaVantageConsumer = artifacts.require("./AlphaVantageConsumer.sol");
+const AlphaVantageConsumer = artifacts.require("AlphaVantageConsumer");
 
 const config = require('../truffle.js');
+const helper = require('./helper');
 
 module.exports = function(deployer, network) {
-  if(config.networks[network].alphaVantageJobId) {
-    deployer.deploy(
-      AlphaVantageConsumer, 
-      config.networks[network].oracleAddress, 
-      config.networks[network].alphaVantageJobId
-    );
+  let job = config.networks[helper.getNetwork(network)].alphaVantageJob;
+  if (job.oracle) {
+    deployer.deploy(AlphaVantageConsumer, job.oracle, web3.utils.utf8ToHex(job.id));
   }
 };
