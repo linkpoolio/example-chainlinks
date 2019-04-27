@@ -1,4 +1,4 @@
-# example-chainlinks
+# Example Chainlinks
 Some example chainlinks that can be deployed for a variety of types of external data.
 
 ### Current examples:
