@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "chainlink/contracts/Chainlinked.sol";
 
-contract AlphaVantageConsumer is Chainlinked, Ownable {
+contract APIAggregatorConsumer is Chainlinked, Ownable {
     // solium-disable-next-line zeppelin/no-arithmetic-operations
     uint256 constant private ORACLE_PAYMENT = 1 * LINK;
 
@@ -23,24 +23,38 @@ contract AlphaVantageConsumer is Chainlinked, Ownable {
         jobId = _jobId;
     }
 
-    /**
-        @dev Request a currency exchange rate
-        @dev This includes Forex and Cryptocurrencies
-        @param _from The currency you want to use as the base
-        @param _to The currency to get in quote
-     */
-    function requestExchangeRate(string _from, string _to) public {
+    function requestETHUSDPrice() public {
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
-        req.add("function", "CURRENCY_EXCHANGE_RATE");
-        req.add("from_currency", _from);
-        req.add("to_currency", _to);
-        string[] memory path = new string[](2);
-        path[0] = "Realtime Currency Exchange Rate";
-        path[1] = "5. Exchange Rate";
-        req.addStringArray("copyPath", path);
+        string[] memory api = new string[](2);
+        api[0] = "https://www.bitstamp.net/api/v2/ticker/ethusd/";
+        api[1] = "https://api.pro.coinbase.com/products/eth-usd/ticker";
+        req.addStringArray("api", api);
+        string[] memory paths = new string[](2);
+        paths[0] = "$.last";
+        paths[1] = "$.price";
+        req.addStringArray("paths", paths);
+        req.add("aggregationType", "median");
+        req.add("copyPath", "aggregateValue");
         req.addInt("times", 100);
         bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
-        requests[requestId] = keccak256(abi.encodePacked(_from, _to));
+        requests[requestId] = keccak256("ETHUSD");
+    }
+
+    function requestBTCUSDPrice() public {
+        Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
+        string[] memory api = new string[](2);
+        api[0] = "https://www.bitstamp.net/api/v2/ticker/btcusd/";
+        api[1] = "https://api.pro.coinbase.com/products/btc-usd/ticker";
+        req.addStringArray("api", api);
+        string[] memory paths = new string[](2);
+        paths[0] = "$.last";
+        paths[1] = "$.price";
+        req.addStringArray("paths", paths);
+        req.add("aggregationType", "median");
+        req.add("copyPath", "aggregateValue");
+        req.addInt("times", 100);
+        bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
+        requests[requestId] = keccak256("BTCUSD");
     }
 
     function cancelRequest(

@@ -3,7 +3,7 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "chainlink/contracts/Chainlinked.sol";
 
-contract AlphaVantageConsumer is Chainlinked, Ownable {
+contract WolframAlphaConsumer is Chainlinked, Ownable {
     // solium-disable-next-line zeppelin/no-arithmetic-operations
     uint256 constant private ORACLE_PAYMENT = 1 * LINK;
 
@@ -11,11 +11,12 @@ contract AlphaVantageConsumer is Chainlinked, Ownable {
 
     event RequestFulfilled(
         bytes32 indexed requestId,
-        uint256 price
+        bytes32 indexed hash,
+        int256 distance
     );
 
     mapping(bytes32 => bytes32) requests;
-    mapping(bytes32 => uint256) public prices;
+    mapping(bytes32 => int256) public distances;
 
     constructor(address _oracle, bytes32 _jobId) public {
         setLinkToken(0x20fE562d797A42Dcb3399062AE9546cd06f63280);
@@ -23,22 +24,11 @@ contract AlphaVantageConsumer is Chainlinked, Ownable {
         jobId = _jobId;
     }
 
-    /**
-        @dev Request a currency exchange rate
-        @dev This includes Forex and Cryptocurrencies
-        @param _from The currency you want to use as the base
-        @param _to The currency to get in quote
-     */
-    function requestExchangeRate(string _from, string _to) public {
+    function requestDistance(string _from, string _to) public {
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
-        req.add("function", "CURRENCY_EXCHANGE_RATE");
-        req.add("from_currency", _from);
-        req.add("to_currency", _to);
-        string[] memory path = new string[](2);
-        path[0] = "Realtime Currency Exchange Rate";
-        path[1] = "5. Exchange Rate";
-        req.addStringArray("copyPath", path);
-        req.addInt("times", 100);
+        req.add("query", string(abi.encodePacked("What's the distance between ", _from, " and ", _to, "?")));
+        req.addInt("index", 1);
+        req.add("copyPath", "result");
         bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
         requests[requestId] = keccak256(abi.encodePacked(_from, _to));
     }
@@ -55,12 +45,12 @@ contract AlphaVantageConsumer is Chainlinked, Ownable {
         cancelChainlinkRequest(_requestId, _payment, _callbackFunctionId, _expiration);
     }
 
-    function fulfill(bytes32 _requestId, uint256 _price)
+    function fulfill(bytes32 _requestId, int256 _distance)
     public
     recordChainlinkFulfillment(_requestId)
     {
-        emit RequestFulfilled(_requestId, _price);
-        prices[requests[_requestId]] = _price;
+        emit RequestFulfilled(_requestId, requests[_requestId], _distance);
+        distances[requests[_requestId]] = _distance;
         delete requests[_requestId];
     }
 

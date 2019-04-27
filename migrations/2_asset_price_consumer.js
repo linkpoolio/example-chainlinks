@@ -1,13 +1,11 @@
-var AssetPriceConsumer = artifacts.require("./AssetPriceConsumer.sol");
+const AssetPriceConsumer = artifacts.require("AssetPriceConsumer");
 
 const config = require('../truffle.js');
+const helper = require('./helper');
 
 module.exports = function(deployer, network) {
-  if(config.networks[network].assetPriceJobId) {
-    deployer.deploy(
-      AssetPriceConsumer, 
-      config.networks[network].oracleAddress, 
-      config.networks[network].assetPriceJobId
-    );
+  let job = config.networks[helper.getNetwork(network)].assetPriceJob;
+  if (job.oracle) {
+    deployer.deploy(AssetPriceConsumer, job.oracle, web3.utils.utf8ToHex(job.id));
   }
 };

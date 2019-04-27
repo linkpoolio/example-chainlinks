@@ -1,28 +1,41 @@
-const HDWalletProvider = require("truffle-hdwallet-provider-privkey");
-const NonceTrackerSubprovider = require("web3-provider-engine/subproviders/nonce-tracker");
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
 module.exports = {
+  compilers: {
+    solc: {
+      version: "0.4.24"
+    }
+  },
   networks: {
     ropsten: {
-      provider: () => {
-        let wallet = new HDWalletProvider(
-          [""], // Private Key (Use a seperate deployment wallet)
-          "" // RPC Host (Infura, your own etc)
+      provider: function() {
+        return new HDWalletProvider(
+            "", // Mnemonic
+            ""  // Ethereum client, Infura etc.
         );
-        let nonceTracker = new NonceTrackerSubprovider();
-        wallet.engine._providers.unshift(nonceTracker);
-        nonceTracker.setEngine(wallet.engine);
-        return wallet;
       },
       network_id: 3,
       gas: 4712388,
-      gasPrice: 100000000000,
-      network_id: "ropsten",
+      gasPrice: 10000000000,
+      skipDryRun: true,
 
       // Chainlink Configuration: LinkPool Ropsten Node
-      oracleAddress: "0xbe4cda56b65af5ab59276ca02e103584aba84603",
-      assetPriceJobId: "2618ad23e2874c36881282e96e819ac4",
-      alphaVantageJobId: "6f9185622f0c406fa2364b7f7fb5a796"
+      assetPriceJob: {
+        id: "740b88dd7d5347bfae116aa65a550ca9",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      },
+      alphaVantageJob: {
+        id: "4f5bd067b34a45b0adae559105f3e6fc",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      },
+      apiAggregatorJob: {
+        id: "becb68242def4f248faa84374d975d4a",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      },
+      wolframAlphaJob: {
+        id: "bdb5a7393629426f8a944f0ccbe6442e",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      }
     },
     development: {
       host: "localhost",
@@ -30,10 +43,23 @@ module.exports = {
       network_id: "*",
       gas: 6712390,
 
-      // Chainlink Configuration: Enter your local job id and oracle address
-      oracleAddress: "",
-      assetPriceJobId: "",
-      alphaVantageJobId: ""
+      // Chainlink Configuration: Enter your local job ids and oracle addresses
+      assetPriceJob: {
+        id: "",
+        oracle: ""
+      },
+      alphaVantageJob: {
+        id: "",
+        oracle: ""
+      },
+      apiAggrgeatorJob: {
+        id: "",
+        oracle: ""
+      },
+      wolframAlphaJob: {
+        id: "",
+        oracle: "",
+      }
     }
   },
   solc: {
