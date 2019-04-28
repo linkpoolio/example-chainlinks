@@ -1,6 +1,6 @@
 const APIAggregatorConsumer = artifacts.require("APIAggregatorConsumer");
 
-module.exports = async(end) => {
+module.exports = async(callback) => {
     try {
         let aac = await APIAggregatorConsumer.deployed();
         let price = await aac.prices.call(web3.utils.sha3("BTCUSD"));
@@ -10,5 +10,5 @@ module.exports = async(end) => {
         console.error(e);
     }
 
-    return end()
+    return callback()
 };

@@ -1,6 +1,6 @@
 const AssetPriceConsumer = artifacts.require("AssetPriceConsumer");
 
-module.exports = async(end) => {
+module.exports = async(callback) => {
     let base = process.argv[4];
     let quote = process.argv[5];
 
@@ -25,5 +25,5 @@ module.exports = async(end) => {
         console.log(e);
     }
 
-    return end()
+    return callback()
 };
