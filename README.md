@@ -10,6 +10,8 @@ multiple APIs for ETH & BTC.
 that list a pair. Eg: BTC-USD, LINK-BTC, ETH-USDT, ADA-BTC.
 - **[Wolfram Alpha](https://github.com/linkpoolio/bridges/tree/master/examples/wolframalpha):** Find the distance between 
 two locations in miles using the Short Answers API and natural language.
+- **Rapid API (Weather)** ([Bridges URL](https://s3.linkpool.io/bridges/rapidapi.json))**:** Get the temperature, 
+humidity and windspeeds at any global location.
 
 ## Install
 
@@ -71,6 +73,26 @@ Request the distance between London and Tokyo:
 npm run exec scripts/wolframalpha/request.js London Tokyo -- --network ropsten
 npm run exec scripts/wolframalpha/get.js London Tokyo -- --network ropsten
 ```
+
+#### Rapid API Weather (OpenWeatherMap)
+Request the temperature in Celsius:
+```
+npm run exec scripts/rapidapiweather/request.js metricTemp London,uk -- --network ropsten
+npm run exec scripts/rapidapiweather/get.js metricTemp London,uk -- --network ropsten
+```
+
+Request the humidity percentage:
+```
+npm run exec scripts/rapidapiweather/request.js humidity London,uk -- --network ropsten
+npm run exec scripts/rapidapiweather/get.js humidity London,uk -- --network ropsten
+```
+
+Request the windspeed in mph:
+```
+npm run exec scripts/rapidapiweather/request.js windSpeed London,uk -- --network ropsten
+npm run exec scripts/rapidapiweather/get.js windSpeed London,uk -- --network ropsten
+```
+
 
 ## Notes
 The `truffle.js` ropsten network is configured to point to a [LinkPool](https://linkpool.io) node. 
