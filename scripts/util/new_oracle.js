@@ -1,6 +1,6 @@
 const Oracle = artifacts.require("Oracle");
 
-module.exports = async(end) => {
+module.exports = async(callback) => {
     try {
         console.log("Deploying Oracle.sol");
         let oc = await Oracle.new(process.argv[4]);
@@ -9,6 +9,5 @@ module.exports = async(end) => {
     } catch (e) {
         console.error(e);
     }
-
-    return end();
-}
+    return callback();
+};

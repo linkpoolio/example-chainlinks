@@ -17,12 +17,16 @@ contract APIAggregatorConsumer is Chainlinked, Ownable {
     mapping(bytes32 => bytes32) requests;
     mapping(bytes32 => uint256) public prices;
 
-    constructor(address _oracle, bytes32 _jobId) public {
-        setLinkToken(0x20fE562d797A42Dcb3399062AE9546cd06f63280);
+    constructor(address _token, address _oracle, bytes32 _jobId) public {
+        setLinkToken(_token);
         setOracle(_oracle);
         jobId = _jobId;
     }
 
+    /**
+        @dev Request the price of ETH using Bitstamp and Coinbase, returning a median value
+        @dev Value is multiplied by 100 to include 2 decimal places
+    */
     function requestETHUSDPrice() public {
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
         string[] memory api = new string[](2);
@@ -36,10 +40,14 @@ contract APIAggregatorConsumer is Chainlinked, Ownable {
         req.add("aggregationType", "median");
         req.add("copyPath", "aggregateValue");
         req.addInt("times", 100);
-        bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
+        bytes32 requestId = chainlinkRequest(req, ORACLE_PAYMENT);
         requests[requestId] = keccak256("ETHUSD");
     }
 
+    /**
+        @dev Request the price of BTC using Bitstamp and Coinbase, returning a median value
+        @dev Value is multiplied by 100 to include 2 decimal places
+    */
     function requestBTCUSDPrice() public {
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
         string[] memory api = new string[](2);

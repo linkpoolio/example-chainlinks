@@ -20,6 +20,7 @@ module.exports = {
       skipDryRun: true,
 
       // Chainlink Configuration: LinkPool Ropsten Node
+      linkToken: "0x20fe562d797a42dcb3399062ae9546cd06f63280",
       assetPriceJob: {
         id: "740b88dd7d5347bfae116aa65a550ca9",
         oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
@@ -35,6 +36,10 @@ module.exports = {
       wolframAlphaJob: {
         id: "bdb5a7393629426f8a944f0ccbe6442e",
         oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      },
+      rapidApiWeather: {
+        id: "73f03227e40e493f99abbc83e9b9da41",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
       }
     },
     development: {
@@ -44,6 +49,7 @@ module.exports = {
       gas: 6712390,
 
       // Chainlink Configuration: Enter your local job ids and oracle addresses
+      linkToken: "",
       assetPriceJob: {
         id: "",
         oracle: ""

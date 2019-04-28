@@ -3,6 +3,9 @@ pragma solidity ^0.4.24;
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "chainlink/contracts/Chainlinked.sol";
 
+/**
+    @dev Asset Price GitHub: https://github.com/linkpoolio/asset-price-cl-ea
+*/
 contract AssetPriceConsumer is Chainlinked, Ownable {
     // solium-disable-next-line zeppelin/no-arithmetic-operations
     uint256 constant private ORACLE_PAYMENT = 1 * LINK;
@@ -17,24 +20,36 @@ contract AssetPriceConsumer is Chainlinked, Ownable {
     mapping(bytes32 => bytes32) requests;
     mapping(bytes32 => uint256) public prices;
 
-    constructor(address _oracle, bytes32 _jobId) public {
-        setLinkToken(0x20fE562d797A42Dcb3399062AE9546cd06f63280);
+    constructor(address _token, address _oracle, bytes32 _jobId) public {
+        setLinkToken(_token);
         setOracle(_oracle);
         jobId = _jobId;
     }
 
+    /**
+        @dev Request the price of an asset quoted in wei
+    */
     function requestWeiPrice(string _base) public {
         requestPrice(_base, "ETH", 1 ether);
     }
 
+    /**
+        @dev Request the price of an asset quoted in sats
+    */
     function requestSatsPrice(string _base) public {
         requestPrice(_base, "BTC", 100000000);
     }
 
+    /**
+        @dev Request the price of an asset quoted in USD with 2 decimal places
+    */
     function requestUSDPrice(string _base) public {
         requestPrice(_base, "USD", 100);
     }
 
+    /**
+        @dev Request the price of an asset quoted in EUR with 2 decimal places
+    */
     function requestEURPrice(string _base) public {
         requestPrice(_base, "EUR", 100);
     }
@@ -45,7 +60,7 @@ contract AssetPriceConsumer is Chainlinked, Ownable {
         req.add("quote", _quote);
         req.add("copyPath", "price");
         req.addInt("times", _times);
-        bytes32 requestId = chainlinkRequestTo(oracleAddress(), req, ORACLE_PAYMENT);
+        bytes32 requestId = chainlinkRequest(req, ORACLE_PAYMENT);
         requests[requestId] = keccak256(abi.encodePacked(_base, _quote));
     }
 

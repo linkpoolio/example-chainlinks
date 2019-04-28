@@ -1,6 +1,6 @@
 const WolframAlphaConsumer = artifacts.require("WolframAlphaConsumer");
 
-module.exports = async(end) => {
+module.exports = async(callback) => {
     try {
         let ph = web3.utils.soliditySha3(process.argv[4], process.argv[5]);
         let wa = await WolframAlphaConsumer.deployed();
@@ -11,5 +11,5 @@ module.exports = async(end) => {
         console.error(e)
     }
 
-    return end()
+    return callback()
 };
