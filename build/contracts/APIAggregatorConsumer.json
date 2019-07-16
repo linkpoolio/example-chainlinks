@@ -285,7 +285,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 3549,
+        "sourceUnit": 3572,
         "src": "28:63:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -296,7 +296,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 2599,
+        "sourceUnit": 2622,
         "src": "93:45:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -310,10 +310,10 @@
               "id": 4,
               "name": "Chainlinked",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2598,
+              "referencedDeclaration": 2621,
               "src": "176:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Chainlinked_$2598",
+                "typeIdentifier": "t_contract$_Chainlinked_$2621",
                 "typeString": "contract Chainlinked"
               }
             },
@@ -328,10 +328,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3548,
+              "referencedDeclaration": 3571,
               "src": "189:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$3548",
+                "typeIdentifier": "t_contract$_Ownable_$3571",
                 "typeString": "contract Ownable"
               }
             },
@@ -341,8 +341,8 @@
           }
         ],
         "contractDependencies": [
-          2598,
-          3548
+          2621,
+          3571
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -350,8 +350,8 @@
         "id": 323,
         "linearizedBaseContracts": [
           323,
-          3548,
-          2598
+          3571,
+          2621
         ],
         "name": "APIAggregatorConsumer",
         "nodeType": "ContractDefinition",
@@ -416,7 +416,7 @@
                 "name": "LINK",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 2199,
+                "referencedDeclaration": 2222,
                 "src": "317:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -659,7 +659,7 @@
                       "name": "setLinkToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2403,
+                      "referencedDeclaration": 2426,
                       "src": "629:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -713,7 +713,7 @@
                       "name": "setOracle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2391,
+                      "referencedDeclaration": 2414,
                       "src": "660:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -913,7 +913,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                        "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                         "typeString": "struct Chainlink.Request"
                       },
                       "typeName": {
@@ -921,10 +921,10 @@
                         "id": 55,
                         "name": "Chainlink.Request",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1952,
+                        "referencedDeclaration": 1975,
                         "src": "946:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_storage_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_storage_ptr",
                           "typeString": "struct Chainlink.Request"
                         }
                       },
@@ -955,7 +955,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3899,
+                        "referencedDeclaration": 3922,
                         "src": "995:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -972,7 +972,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3899,
+                            "referencedDeclaration": 3922,
                             "src": "1001:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -1027,10 +1027,10 @@
                       "name": "newRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2269,
+                      "referencedDeclaration": 2292,
                       "src": "977:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (bytes32,address,bytes4) pure returns (struct Chainlink.Request memory)"
                       }
                     },
@@ -1044,7 +1044,7 @@
                     "nodeType": "FunctionCall",
                     "src": "977:46:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                      "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                       "typeString": "struct Chainlink.Request memory"
                     }
                   },
@@ -1394,7 +1394,7 @@
                         "referencedDeclaration": 56,
                         "src": "1224:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -1405,10 +1405,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "1224:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -1773,7 +1773,7 @@
                         "referencedDeclaration": 56,
                         "src": "1376:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -1784,10 +1784,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "1376:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -1870,7 +1870,7 @@
                         "referencedDeclaration": 56,
                         "src": "1421:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -1881,10 +1881,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "1421:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -1967,7 +1967,7 @@
                         "referencedDeclaration": 56,
                         "src": "1468:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -1978,10 +1978,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "1468:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -2064,7 +2064,7 @@
                         "referencedDeclaration": 56,
                         "src": "1516:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -2075,10 +2075,10 @@
                       "lValueRequested": false,
                       "memberName": "addInt",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2097,
+                      "referencedDeclaration": 2120,
                       "src": "1516:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,int256) pure"
                       }
                     },
@@ -2162,7 +2162,7 @@
                         "nodeType": "Identifier",
                         "src": "1588:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         "name": "req",
@@ -2199,7 +2199,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         {
@@ -2215,10 +2215,10 @@
                       "name": "chainlinkRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2285,
+                      "referencedDeclaration": 2308,
                       "src": "1571:16:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Request_$1952_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Request_$1975_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
                         "typeString": "function (struct Chainlink.Request memory,uint256) returns (bytes32)"
                       }
                     },
@@ -2322,7 +2322,7 @@
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3860,
+                        "referencedDeclaration": 3883,
                         "src": "1641:9:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -2403,7 +2403,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                        "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                         "typeString": "struct Chainlink.Request"
                       },
                       "typeName": {
@@ -2411,10 +2411,10 @@
                         "id": 165,
                         "name": "Chainlink.Request",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1952,
+                        "referencedDeclaration": 1975,
                         "src": "1903:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_storage_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_storage_ptr",
                           "typeString": "struct Chainlink.Request"
                         }
                       },
@@ -2445,7 +2445,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3899,
+                        "referencedDeclaration": 3922,
                         "src": "1952:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -2462,7 +2462,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3899,
+                            "referencedDeclaration": 3922,
                             "src": "1958:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -2517,10 +2517,10 @@
                       "name": "newRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2269,
+                      "referencedDeclaration": 2292,
                       "src": "1934:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (bytes32,address,bytes4) pure returns (struct Chainlink.Request memory)"
                       }
                     },
@@ -2534,7 +2534,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1934:46:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                      "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                       "typeString": "struct Chainlink.Request memory"
                     }
                   },
@@ -2884,7 +2884,7 @@
                         "referencedDeclaration": 166,
                         "src": "2181:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -2895,10 +2895,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "2181:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -3263,7 +3263,7 @@
                         "referencedDeclaration": 166,
                         "src": "2333:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -3274,10 +3274,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "2333:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -3360,7 +3360,7 @@
                         "referencedDeclaration": 166,
                         "src": "2378:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -3371,10 +3371,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "2378:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -3457,7 +3457,7 @@
                         "referencedDeclaration": 166,
                         "src": "2425:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -3468,10 +3468,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "2425:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -3554,7 +3554,7 @@
                         "referencedDeclaration": 166,
                         "src": "2473:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -3565,10 +3565,10 @@
                       "lValueRequested": false,
                       "memberName": "addInt",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2097,
+                      "referencedDeclaration": 2120,
                       "src": "2473:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,int256) pure"
                       }
                     },
@@ -3635,7 +3635,7 @@
                           "name": "oracleAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2423,
+                          "referencedDeclaration": 2446,
                           "src": "2547:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -3665,7 +3665,7 @@
                         "referencedDeclaration": 166,
                         "src": "2564:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -3690,7 +3690,7 @@
                           "typeString": "address"
                         },
                         {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         {
@@ -3702,10 +3702,10 @@
                       "name": "chainlinkRequestTo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2341,
+                      "referencedDeclaration": 2364,
                       "src": "2528:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_struct$_Request_$1952_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_struct$_Request_$1975_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
                         "typeString": "function (address,struct Chainlink.Request memory,uint256) returns (bytes32)"
                       }
                     },
@@ -3809,7 +3809,7 @@
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3860,
+                        "referencedDeclaration": 3883,
                         "src": "2617:9:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -3955,7 +3955,7 @@
                       "name": "cancelChainlinkRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2379,
+                      "referencedDeclaration": 2402,
                       "src": "2848:22:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_uint256_$_t_bytes4_$_t_uint256_$returns$__$",
@@ -3997,7 +3997,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3496,
+                  "referencedDeclaration": 3519,
                   "src": "2822:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -4403,7 +4403,7 @@
                   "name": "recordChainlinkFulfillment",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2580,
+                  "referencedDeclaration": 2603,
                   "src": "3012:26:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_bytes32_$",
@@ -4522,7 +4522,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 3549,
+        "sourceUnit": 3572,
         "src": "28:63:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4533,7 +4533,7 @@
         "id": 3,
         "nodeType": "ImportDirective",
         "scope": 324,
-        "sourceUnit": 2599,
+        "sourceUnit": 2622,
         "src": "93:45:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -4547,10 +4547,10 @@
               "id": 4,
               "name": "Chainlinked",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2598,
+              "referencedDeclaration": 2621,
               "src": "176:11:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Chainlinked_$2598",
+                "typeIdentifier": "t_contract$_Chainlinked_$2621",
                 "typeString": "contract Chainlinked"
               }
             },
@@ -4565,10 +4565,10 @@
               "id": 6,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3548,
+              "referencedDeclaration": 3571,
               "src": "189:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$3548",
+                "typeIdentifier": "t_contract$_Ownable_$3571",
                 "typeString": "contract Ownable"
               }
             },
@@ -4578,8 +4578,8 @@
           }
         ],
         "contractDependencies": [
-          2598,
-          3548
+          2621,
+          3571
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -4587,8 +4587,8 @@
         "id": 323,
         "linearizedBaseContracts": [
           323,
-          3548,
-          2598
+          3571,
+          2621
         ],
         "name": "APIAggregatorConsumer",
         "nodeType": "ContractDefinition",
@@ -4653,7 +4653,7 @@
                 "name": "LINK",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 2199,
+                "referencedDeclaration": 2222,
                 "src": "317:4:0",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
@@ -4896,7 +4896,7 @@
                       "name": "setLinkToken",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2403,
+                      "referencedDeclaration": 2426,
                       "src": "629:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -4950,7 +4950,7 @@
                       "name": "setOracle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2391,
+                      "referencedDeclaration": 2414,
                       "src": "660:9:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
@@ -5150,7 +5150,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                        "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                         "typeString": "struct Chainlink.Request"
                       },
                       "typeName": {
@@ -5158,10 +5158,10 @@
                         "id": 55,
                         "name": "Chainlink.Request",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1952,
+                        "referencedDeclaration": 1975,
                         "src": "946:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_storage_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_storage_ptr",
                           "typeString": "struct Chainlink.Request"
                         }
                       },
@@ -5192,7 +5192,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3899,
+                        "referencedDeclaration": 3922,
                         "src": "995:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -5209,7 +5209,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3899,
+                            "referencedDeclaration": 3922,
                             "src": "1001:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -5264,10 +5264,10 @@
                       "name": "newRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2269,
+                      "referencedDeclaration": 2292,
                       "src": "977:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (bytes32,address,bytes4) pure returns (struct Chainlink.Request memory)"
                       }
                     },
@@ -5281,7 +5281,7 @@
                     "nodeType": "FunctionCall",
                     "src": "977:46:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                      "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                       "typeString": "struct Chainlink.Request memory"
                     }
                   },
@@ -5631,7 +5631,7 @@
                         "referencedDeclaration": 56,
                         "src": "1224:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -5642,10 +5642,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "1224:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -6010,7 +6010,7 @@
                         "referencedDeclaration": 56,
                         "src": "1376:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -6021,10 +6021,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "1376:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -6107,7 +6107,7 @@
                         "referencedDeclaration": 56,
                         "src": "1421:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -6118,10 +6118,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "1421:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -6204,7 +6204,7 @@
                         "referencedDeclaration": 56,
                         "src": "1468:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -6215,10 +6215,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "1468:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -6301,7 +6301,7 @@
                         "referencedDeclaration": 56,
                         "src": "1516:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -6312,10 +6312,10 @@
                       "lValueRequested": false,
                       "memberName": "addInt",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2097,
+                      "referencedDeclaration": 2120,
                       "src": "1516:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,int256) pure"
                       }
                     },
@@ -6399,7 +6399,7 @@
                         "nodeType": "Identifier",
                         "src": "1588:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         "name": "req",
@@ -6436,7 +6436,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         {
@@ -6452,10 +6452,10 @@
                       "name": "chainlinkRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2285,
+                      "referencedDeclaration": 2308,
                       "src": "1571:16:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Request_$1952_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Request_$1975_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
                         "typeString": "function (struct Chainlink.Request memory,uint256) returns (bytes32)"
                       }
                     },
@@ -6559,7 +6559,7 @@
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3860,
+                        "referencedDeclaration": 3883,
                         "src": "1641:9:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -6640,7 +6640,7 @@
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                        "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                         "typeString": "struct Chainlink.Request"
                       },
                       "typeName": {
@@ -6648,10 +6648,10 @@
                         "id": 165,
                         "name": "Chainlink.Request",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1952,
+                        "referencedDeclaration": 1975,
                         "src": "1903:17:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_storage_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_storage_ptr",
                           "typeString": "struct Chainlink.Request"
                         }
                       },
@@ -6682,7 +6682,7 @@
                         "name": "this",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3899,
+                        "referencedDeclaration": 3922,
                         "src": "1952:4:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -6699,7 +6699,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3899,
+                            "referencedDeclaration": 3922,
                             "src": "1958:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_APIAggregatorConsumer_$323",
@@ -6754,10 +6754,10 @@
                       "name": "newRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2269,
+                      "referencedDeclaration": 2292,
                       "src": "1934:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_address_$_t_bytes4_$returns$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (bytes32,address,bytes4) pure returns (struct Chainlink.Request memory)"
                       }
                     },
@@ -6771,7 +6771,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1934:46:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                      "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                       "typeString": "struct Chainlink.Request memory"
                     }
                   },
@@ -7121,7 +7121,7 @@
                         "referencedDeclaration": 166,
                         "src": "2181:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7132,10 +7132,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "2181:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -7500,7 +7500,7 @@
                         "referencedDeclaration": 166,
                         "src": "2333:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7511,10 +7511,10 @@
                       "lValueRequested": false,
                       "memberName": "addStringArray",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2179,
+                      "referencedDeclaration": 2202,
                       "src": "2333:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_array$_t_string_memory_$dyn_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory[] memory) pure"
                       }
                     },
@@ -7597,7 +7597,7 @@
                         "referencedDeclaration": 166,
                         "src": "2378:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7608,10 +7608,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "2378:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -7694,7 +7694,7 @@
                         "referencedDeclaration": 166,
                         "src": "2425:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7705,10 +7705,10 @@
                       "lValueRequested": false,
                       "memberName": "add",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2045,
+                      "referencedDeclaration": 2068,
                       "src": "2425:7:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,string memory) pure"
                       }
                     },
@@ -7791,7 +7791,7 @@
                         "referencedDeclaration": 166,
                         "src": "2473:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7802,10 +7802,10 @@
                       "lValueRequested": false,
                       "memberName": "addInt",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 2097,
+                      "referencedDeclaration": 2120,
                       "src": "2473:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1952_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1952_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_Request_$1975_memory_ptr_$_t_string_memory_ptr_$_t_int256_$returns$__$bound_to$_t_struct$_Request_$1975_memory_ptr_$",
                         "typeString": "function (struct Chainlink.Request memory,string memory,int256) pure"
                       }
                     },
@@ -7872,7 +7872,7 @@
                           "name": "oracleAddress",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2423,
+                          "referencedDeclaration": 2446,
                           "src": "2547:13:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
@@ -7902,7 +7902,7 @@
                         "referencedDeclaration": 166,
                         "src": "2564:3:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         }
                       },
@@ -7927,7 +7927,7 @@
                           "typeString": "address"
                         },
                         {
-                          "typeIdentifier": "t_struct$_Request_$1952_memory_ptr",
+                          "typeIdentifier": "t_struct$_Request_$1975_memory_ptr",
                           "typeString": "struct Chainlink.Request memory"
                         },
                         {
@@ -7939,10 +7939,10 @@
                       "name": "chainlinkRequestTo",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2341,
+                      "referencedDeclaration": 2364,
                       "src": "2528:18:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_struct$_Request_$1952_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_struct$_Request_$1975_memory_ptr_$_t_uint256_$returns$_t_bytes32_$",
                         "typeString": "function (address,struct Chainlink.Request memory,uint256) returns (bytes32)"
                       }
                     },
@@ -8046,7 +8046,7 @@
                         "name": "keccak256",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3860,
+                        "referencedDeclaration": 3883,
                         "src": "2617:9:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -8192,7 +8192,7 @@
                       "name": "cancelChainlinkRequest",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2379,
+                      "referencedDeclaration": 2402,
                       "src": "2848:22:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_uint256_$_t_bytes4_$_t_uint256_$returns$__$",
@@ -8234,7 +8234,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3496,
+                  "referencedDeclaration": 3519,
                   "src": "2822:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -8640,7 +8640,7 @@
                   "name": "recordChainlinkFulfillment",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 2580,
+                  "referencedDeclaration": 2603,
                   "src": "3012:26:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$_t_bytes32_$",
@@ -8745,7 +8745,7 @@
     }
   },
   "schemaVersion": "3.0.8",
-  "updatedAt": "2019-04-28T22:59:15.997Z",
+  "updatedAt": "2019-07-16T09:12:45.804Z",
   "devdoc": {
     "methods": {
       "renounceOwnership()": {

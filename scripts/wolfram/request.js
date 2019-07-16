@@ -12,7 +12,7 @@ module.exports = async(callback) => {
         let linkToken = await LinkToken.at(helper.getLinkToken(network));
         let wa = await WolframAlphaConsumer.deployed();
         console.log("Sending 1 LINK to the consumer contract...");
-        await linkToken.transfer(wa.address, web3.utils.toWei("10"));
+        await linkToken.transfer(wa.address, web3.utils.toWei("1"));
         console.log("Requesting distance from WolframAlpha Short Answers...");
         await wa.requestDistance(from, to);
         console.log("Done");

@@ -9,6 +9,7 @@ import "chainlink/contracts/Chainlinked.sol";
 contract WolframAlphaConsumer is Chainlinked, Ownable {
     // solium-disable-next-line zeppelin/no-arithmetic-operations
     uint256 constant private ORACLE_PAYMENT = 1 * LINK;
+    string constant public BASE_URL = "http://api.wolframalpha.com/v1/result?i=";
 
     bytes32 public jobId;
 
@@ -16,6 +17,10 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
         bytes32 indexed requestId,
         bytes32 indexed hash,
         int256 distance
+    );
+
+    event WolframAlphaQuery(
+        string url
     );
 
     mapping(bytes32 => bytes32) requests;
@@ -33,12 +38,15 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
         @param _to The location to, eg: Sydney
     */
     function requestDistance(string _from, string _to) public {
+        string memory query = string(abi.encodePacked("What's the distance between ", _from, " and ", _to, "?"));
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
-        req.add("query", string(abi.encodePacked("What's the distance between ", _from, " and ", _to, "?")));
+        req.add("query", query);
         req.addInt("index", 1);
         req.add("copyPath", "result");
         bytes32 requestId = chainlinkRequest(req, ORACLE_PAYMENT);
         requests[requestId] = keccak256(abi.encodePacked(_from, _to));
+
+        emit WolframAlphaQuery(string(abi.encodePacked(BASE_URL, query)));
     }
 
     function cancelRequest(
