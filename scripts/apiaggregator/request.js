@@ -1,4 +1,4 @@
-import {getLinkToken} from "../helper";
+const helper = require("../helper");
 
 const APIAggregatorConsumer = artifacts.require("APIAggregatorConsumer");
 const LinkToken = artifacts.require("LinkTokenInterface");
@@ -6,7 +6,7 @@ const LinkToken = artifacts.require("LinkTokenInterface");
 module.exports = async(callback) => {
     try {
         let network = await web3.eth.net.getNetworkType();
-        let linkToken = await LinkToken.at(getLinkToken(network));
+        let linkToken = await LinkToken.at(helper.getLinkToken(network));
         let aac = await APIAggregatorConsumer.deployed();
         console.log("Sending 1 LINK to the consumer contract...");
         await linkToken.transfer(aac.address, web3.utils.toWei("1"));
