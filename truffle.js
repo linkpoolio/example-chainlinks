@@ -58,11 +58,15 @@ module.exports = {
         id: "",
         oracle: ""
       },
-      apiAggrgeatorJob: {
+      apiAggregatorJob: {
         id: "",
         oracle: ""
       },
       wolframAlphaJob: {
+        id: "",
+        oracle: "",
+      },
+      rapidApiWeather: {
         id: "",
         oracle: "",
       }
