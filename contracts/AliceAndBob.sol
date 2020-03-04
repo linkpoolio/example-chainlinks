@@ -11,7 +11,7 @@ contract AliceAndBob is Chainlinked, Ownable {
     address public bobAddress;
     bytes32 public jobId;
 
-    uint256 constant ESCROW_AMOUNT_USD = 50;
+    uint256 constant ESCROW_AMOUNT_EUR = 50;
 
     event DepositMade(uint256 amount);
     event RankingReturned(uint256 rank);
@@ -69,7 +69,7 @@ contract AliceAndBob is Chainlinked, Ownable {
     public
     recordChainlinkFulfillment(_requestId)
     {
-        uint256 transferAmount = ESCROW_AMOUNT_USD.mul(10**20).div(_price);
+        uint256 transferAmount = ESCROW_AMOUNT_EUR.mul(10**20).div(_price);
         if (transferAmount <= address(this).balance) {
             bobAddress.transfer(transferAmount);
             selfdestruct(aliceAddress);
