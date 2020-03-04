@@ -1,15 +1,10 @@
 {
-  "contractName": "ENSResolver",
+  "contractName": "PointerInterface",
   "abi": [
     {
       "constant": true,
-      "inputs": [
-        {
-          "name": "node",
-          "type": "bytes32"
-        }
-      ],
-      "name": "addr",
+      "inputs": [],
+      "name": "getAddress",
       "outputs": [
         {
           "name": "",
@@ -26,96 +21,69 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.4.24;\n\ncontract ENSResolver {\n  function addr(bytes32 node) public view returns (address);\n}\n",
-  "sourcePath": "chainlink/contracts/ENSResolver.sol",
+  "source": "pragma solidity 0.4.24;\n\ninterface PointerInterface {\n  function getAddress() external view returns (address);\n}\n",
+  "sourcePath": "chainlink/contracts/interfaces/PointerInterface.sol",
   "ast": {
-    "absolutePath": "chainlink/contracts/ENSResolver.sol",
+    "absolutePath": "chainlink/contracts/interfaces/PointerInterface.sol",
     "exportedSymbols": {
-      "ENSResolver": [
-        2917
+      "PointerInterface": [
+        3552
       ]
     },
-    "id": 2918,
+    "id": 3553,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2909,
+        "id": 3546,
         "literals": [
           "solidity",
           "0.4",
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:12"
+        "src": "0:23:18"
       },
       {
         "baseContracts": [],
         "contractDependencies": [],
-        "contractKind": "contract",
+        "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2917,
+        "id": 3552,
         "linearizedBaseContracts": [
-          2917
+          3552
         ],
-        "name": "ENSResolver",
+        "name": "PointerInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": null,
             "documentation": null,
-            "id": 2916,
+            "id": 3551,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [],
-            "name": "addr",
+            "name": "getAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2912,
+              "id": 3547,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 2911,
-                  "name": "node",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 2916,
-                  "src": "64:12:12",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 2910,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "64:7:12",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "63:14:12"
+              "parameters": [],
+              "src": "75:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2915,
+              "id": 3550,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2914,
+                  "id": 3549,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2916,
-                  "src": "99:7:12",
+                  "scope": 3551,
+                  "src": "101:7:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -123,10 +91,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2913,
+                    "id": 3548,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "99:7:12",
+                    "src": "101:7:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -136,109 +104,82 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "98:9:12"
+              "src": "100:9:18"
             },
-            "scope": 2917,
-            "src": "50:58:12",
+            "scope": 3552,
+            "src": "56:54:18",
             "stateMutability": "view",
             "superFunction": null,
-            "visibility": "public"
+            "visibility": "external"
           }
         ],
-        "scope": 2918,
-        "src": "25:85:12"
+        "scope": 3553,
+        "src": "25:87:18"
       }
     ],
-    "src": "0:111:12"
+    "src": "0:113:18"
   },
   "legacyAST": {
-    "absolutePath": "chainlink/contracts/ENSResolver.sol",
+    "absolutePath": "chainlink/contracts/interfaces/PointerInterface.sol",
     "exportedSymbols": {
-      "ENSResolver": [
-        2917
+      "PointerInterface": [
+        3552
       ]
     },
-    "id": 2918,
+    "id": 3553,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2909,
+        "id": 3546,
         "literals": [
           "solidity",
           "0.4",
           ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:12"
+        "src": "0:23:18"
       },
       {
         "baseContracts": [],
         "contractDependencies": [],
-        "contractKind": "contract",
+        "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 2917,
+        "id": 3552,
         "linearizedBaseContracts": [
-          2917
+          3552
         ],
-        "name": "ENSResolver",
+        "name": "PointerInterface",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": null,
             "documentation": null,
-            "id": 2916,
+            "id": 3551,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": true,
             "modifiers": [],
-            "name": "addr",
+            "name": "getAddress",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2912,
+              "id": 3547,
               "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 2911,
-                  "name": "node",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 2916,
-                  "src": "64:12:12",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_bytes32",
-                    "typeString": "bytes32"
-                  },
-                  "typeName": {
-                    "id": 2910,
-                    "name": "bytes32",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "64:7:12",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_bytes32",
-                      "typeString": "bytes32"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "63:14:12"
+              "parameters": [],
+              "src": "75:2:18"
             },
             "payable": false,
             "returnParameters": {
-              "id": 2915,
+              "id": 3550,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2914,
+                  "id": 3549,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2916,
-                  "src": "99:7:12",
+                  "scope": 3551,
+                  "src": "101:7:18",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -246,10 +187,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 2913,
+                    "id": 3548,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "99:7:12",
+                    "src": "101:7:18",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -259,28 +200,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "98:9:12"
+              "src": "100:9:18"
             },
-            "scope": 2917,
-            "src": "50:58:12",
+            "scope": 3552,
+            "src": "56:54:18",
             "stateMutability": "view",
             "superFunction": null,
-            "visibility": "public"
+            "visibility": "external"
           }
         ],
-        "scope": 2918,
-        "src": "25:85:12"
+        "scope": 3553,
+        "src": "25:87:18"
       }
     ],
-    "src": "0:111:12"
+    "src": "0:113:18"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.8",
-  "updatedAt": "2020-03-04T12:12:19.873Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-04T10:51:13.296Z",
   "devdoc": {
     "methods": {}
   },

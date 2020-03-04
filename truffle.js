@@ -11,7 +11,9 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
             "", // Mnemonic
-            ""  // Ethereum client, Infura etc.
+            "", // Ethereum client, Infura etc.
+            0,
+            2
         );
       },
       network_id: 3,
@@ -40,6 +42,10 @@ module.exports = {
       rapidApiWeather: {
         id: "73f03227e40e493f99abbc83e9b9da41",
         oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
+      },
+      httpGet: {
+        id: "c179a8180e034cf5a341488406c32827",
+        oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
       }
     },
     development: {
@@ -67,6 +73,10 @@ module.exports = {
         oracle: "",
       },
       rapidApiWeather: {
+        id: "",
+        oracle: "",
+      },
+      httpGet: {
         id: "",
         oracle: "",
       }
