@@ -16,7 +16,7 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
     event RequestFulfilled(
         bytes32 indexed requestId,
         bytes32 indexed hash,
-        int256 distance
+        int256 answer
     );
 
     event WolframAlphaQuery(
@@ -24,7 +24,7 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
     );
 
     mapping(bytes32 => bytes32) requests;
-    mapping(bytes32 => int256) public distances;
+    mapping(bytes32 => int256) public answers;
 
     constructor(address _token, address _oracle, bytes32 _jobId) public {
         setLinkToken(_token);
@@ -33,20 +33,18 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
     }
 
     /**
-        @dev Request the distance between two location in miles
-        @param _from The location from, eg: London
-        @param _to The location to, eg: Sydney
+        @dev Request an answer to a query
+        @param _query query to request answer for
     */
-    function requestDistance(string _from, string _to) public {
-        string memory query = string(abi.encodePacked("What's the distance between ", _from, " and ", _to, "?"));
+    function requestAnswer(string _query, uint8 _index) public {
         Chainlink.Request memory req = newRequest(jobId, this, this.fulfill.selector);
-        req.add("query", query);
-        req.addInt("index", 1);
+        req.add("query", _query);
+        req.addInt("index", _index);
         req.add("copyPath", "result");
         bytes32 requestId = chainlinkRequest(req, ORACLE_PAYMENT);
-        requests[requestId] = keccak256(abi.encodePacked(_from, _to));
+        requests[requestId] = keccak256(abi.encodePacked(_query));
 
-        emit WolframAlphaQuery(string(abi.encodePacked(BASE_URL, query)));
+        emit WolframAlphaQuery(string(abi.encodePacked(BASE_URL, formatUrl(_query))));
     }
 
     function cancelRequest(
@@ -61,13 +59,26 @@ contract WolframAlphaConsumer is Chainlinked, Ownable {
         cancelChainlinkRequest(_requestId, _payment, _callbackFunctionId, _expiration);
     }
 
-    function fulfill(bytes32 _requestId, int256 _distance)
+    function fulfill(bytes32 _requestId, int256 _answer)
     public
     recordChainlinkFulfillment(_requestId)
     {
-        emit RequestFulfilled(_requestId, requests[_requestId], _distance);
-        distances[requests[_requestId]] = _distance;
+        emit RequestFulfilled(_requestId, requests[_requestId], _answer);
+        answers[requests[_requestId]] = _answer;
         delete requests[_requestId];
+    }
+
+    function formatUrl(string _url) private pure returns (string){
+      bytes memory urlBytes = bytes(_url);
+      bytes memory formatted = new bytes(urlBytes.length);
+      for(uint i = 0; i < urlBytes.length; i++) {
+        if (urlBytes[i] == " ") {
+          formatted[i] = "+";
+        } else {
+          formatted[i] = urlBytes[i];
+        }
+      }
+      return string(formatted);
     }
 
 }
