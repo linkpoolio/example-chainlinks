@@ -1,20 +1,21 @@
-const HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
 
 module.exports = {
   compilers: {
     solc: {
-      version: "0.4.24"
-    }
+      version: "0.4.24",
+    },
   },
   networks: {
     ropsten: {
-      provider: function() {
-        return new HDWalletProvider(
-            "", // Mnemonic
-            "", // Ethereum client, Infura etc.
-            0,
-            2
-        );
+      provider: function () {
+        return new HDWalletProvider({
+          privateKeys: [
+            "0b82eddeac6c08a25e64e494cc3fabfb29fc7861d5dff71c453874d482a50c82",
+          ], // Mnemonic
+          providerOrUrl:
+            "https://ropsten.infura.io/v3/8bc24cb75f3c47eba9bb028b64085bd4", // Ethereum client, Infura etc.
+        });
       },
       network_id: 3,
       gas: 4712388,
@@ -46,7 +47,7 @@ module.exports = {
       httpGet: {
         id: "c179a8180e034cf5a341488406c32827",
         oracle: "0x83F00b902cbf06E316C95F51cbEeD9D2572a349a",
-      }
+      },
     },
     development: {
       host: "localhost",
@@ -58,15 +59,15 @@ module.exports = {
       linkToken: "",
       assetPriceJob: {
         id: "",
-        oracle: ""
+        oracle: "",
       },
       alphaVantageJob: {
         id: "",
-        oracle: ""
+        oracle: "",
       },
       apiAggregatorJob: {
         id: "",
-        oracle: ""
+        oracle: "",
       },
       wolframAlphaJob: {
         id: "",
@@ -79,13 +80,13 @@ module.exports = {
       httpGet: {
         id: "",
         oracle: "",
-      }
-    }
+      },
+    },
   },
   solc: {
     optimizer: {
       enabled: true,
-      runs: 200
-    }
-  }
+      runs: 200,
+    },
+  },
 };
