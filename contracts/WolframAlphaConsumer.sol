@@ -9,7 +9,7 @@ import "chainlink/contracts/Chainlinked.sol";
 contract WolframAlphaConsumer is Chainlinked, Ownable {
     // solium-disable-next-line zeppelin/no-arithmetic-operations
     uint256 constant private ORACLE_PAYMENT = 1 * LINK;
-    string constant public BASE_URL = "http://api.wolframalpha.com/v1/result?i=";
+    string constant public BASE_URL = "https://www.wolframalpha.com/input/?i=";
 
     bytes32 public jobId;
 
